@@ -5,7 +5,6 @@ title Sauvegarde Des EARs V1.6
 rem =======================================================================================
 rem =================                Script realise par                   =================
 rem =================                 SCH MEDARD Fabien                   =================
-rem =================                  1ฐ Cie du 48 RT                    =================
 rem =================                                                     =================
 rem =================                  MAJ 09/05/2015                     =================
 rem =======================================================================================
@@ -18,9 +17,9 @@ rem =================                fabien.medard@gmail.com              ======
 rem =======================================================================================
 rem =======================================================================================
 cls
-echo ษอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-echo บ                         Sauvegarde Des EARs V1.6                            บ
-echo ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+echo รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยป
+echo ยบ                         Sauvegarde Des EARs V1.6                            ยบ
+echo รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยผ
                 
 
 rem couleur du script
@@ -73,7 +72,7 @@ IF NOT exist %Racine%\%RepSave%\ mkdir %RepSave%
 :rep1
 cd %RepSave%
 
-rem creation du repertoire de l'ann้e
+rem creation du repertoire de l'annรฉe
 IF exist %Racine%\%RepSave%\%year% goto rep2
 IF NOT exist %Racine%\%RepSave%\%year% echo Creation du repertoire %year%
 IF NOT exist %Racine%\%RepSave%\%year% mkdir %year%
@@ -165,14 +164,14 @@ rem =====================================================================
 
 set /a count = count + 1
 
-echo ษอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-echo บ            Sauvegarde De %EAR% / %IPEAR%        
-echo ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+echo รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยป
+echo ยบ            Sauvegarde De %EAR% / %IPEAR%        
+echo รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยผ
 
-echo อออออออออ[ 01. Recherche d une precedente sauvegarde de %EAR%
+echo รรรรรรรรร[ 01. Recherche d une precedente sauvegarde de %EAR%
 
 IF exist %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.rtf (
-	echo อออออออออ[ 02. Sauvegarde detecte pour %EAR%
+	echo รรรรรรรรร[ 02. Sauvegarde detecte pour %EAR%
 	echo                           Abandon de la sauvegarde
 	echo.
 	set /a Sabandon = Sabandon + 1
@@ -180,28 +179,28 @@ IF exist %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.rtf (
 	)
 
 IF NOT exist %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.rtf (
-	echo อออออออออ[ 02. Aucune sauvegarde detecte pour %EAR%
-	echo อออออออออ[ 03. Creation de la sauvegarde de %EAR%
+	echo รรรรรรรรร[ 02. Aucune sauvegarde detecte pour %EAR%
+	echo รรรรรรรรร[ 03. Creation de la sauvegarde de %EAR%
 	)
 
-echo อออออออออ[ 04. Connexion a %EAR%
+echo รรรรรรรรร[ 04. Connexion a %EAR%
 
 "%Racine%\%DossierScript%\plink.exe" -ssh %IDSave%@%IPEAR% -pw %MDPSAVE% "copy run tftp://%ServeurTFTP%/%EAR%.rtf"
 
 echo.
-echo อออออออออ[ 05. Deconnexion de %EAR%
-echo อออออออออ[ 06. Deplacement du fichier de sauvegarde %EAR%.rtf
+echo รรรรรรรรร[ 05. Deconnexion de %EAR%
+echo รรรรรรรรร[ 06. Deplacement du fichier de sauvegarde %EAR%.rtf
 
 move %Racine%\%RepSave%\%EAR%.rtf %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.rtf
 
-echo อออออออออ[ 07. Fin sauvegarde de la configuration de %EAR%
-echo อออออออออ[ 08. Verification de la sauvegarde de %EAR%
+echo รรรรรรรรร[ 07. Fin sauvegarde de la configuration de %EAR%
+echo รรรรรรรรร[ 08. Verification de la sauvegarde de %EAR%
 
 IF exist %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.rtf (
 	set /a Seffectue = Seffectue + 1
 	)
 IF NOT exist %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.rtf (
-	echo อออออออออ[ 09. Echec de la sauvegarde de %EAR%
+	echo รรรรรรรรร[ 09. Echec de la sauvegarde de %EAR%
 	set /a Sechec = Sechec + 1
 	)
 
@@ -219,14 +218,14 @@ rem =====================================================================
 
 set /a count = count + 1
 
-echo ษอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-echo บ            Sauvegarde De %EAR% / %IPEAR%        
-echo ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+echo รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยป
+echo ยบ            Sauvegarde De %EAR% / %IPEAR%        
+echo รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยผ
 
-echo อออออออออ[ 01. Recherche d une precedente sauvegarde de %EAR%
+echo รรรรรรรรร[ 01. Recherche d une precedente sauvegarde de %EAR%
 
 IF exist %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.txt (
-	echo อออออออออ[ 02. Sauvegarde detecte pour %EAR%
+	echo รรรรรรรรร[ 02. Sauvegarde detecte pour %EAR%
 	echo                           Abandon de la sauvegarde
 	echo.
 	set /a Sabandon = Sabandon + 1
@@ -234,28 +233,28 @@ IF exist %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.txt (
 )
 
 IF NOT exist %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.txt (
-	echo อออออออออ[ 02. Aucune sauvegarde detecte pour %EAR%
-	echo อออออออออ[ 03. Creation de la sauvegarde de %EAR%
+	echo รรรรรรรรร[ 02. Aucune sauvegarde detecte pour %EAR%
+	echo รรรรรรรรร[ 03. Creation de la sauvegarde de %EAR%
 )
 
-echo อออออออออ[ 04. Connexion a %EAR%
+echo รรรรรรรรร[ 04. Connexion a %EAR%
 
 "%Racine%\%DossierScript%\plink.exe" -ssh %IDSave%@%IPEAR% -pw %MDPSAVE% "tftp %ServeurTFTP% put save.cfg %EAR%.txt"
 
 echo.
-echo อออออออออ[ 05. Deconnexion de %EAR%
-echo อออออออออ[ 06. Deplacement du fichier de sauvegarde %EAR%.txt
+echo รรรรรรรรร[ 05. Deconnexion de %EAR%
+echo รรรรรรรรร[ 06. Deplacement du fichier de sauvegarde %EAR%.txt
 
 move %Racine%\%RepSave%\%EAR%.txt %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.txt
 
-echo อออออออออ[ 07. Fin sauvegarde de la configuration de %EAR%
-echo อออออออออ[ 08. Verification de la sauvegarde de %EAR%
+echo รรรรรรรรร[ 07. Fin sauvegarde de la configuration de %EAR%
+echo รรรรรรรรร[ 08. Verification de la sauvegarde de %EAR%
 IF exist %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.txt (
-	echo อออออออออ[ 09. Reussite de la sauvegarde de %EAR%
+	echo รรรรรรรรร[ 09. Reussite de la sauvegarde de %EAR%
 	set /a Seffectue = Seffectue + 1
 	)
 IF NOT exist %Racine%\%RepSave%\%year%\%year%-%month%\%udate%\%EAR%.txt (
-	echo อออออออออ[ 09. Echec de la sauvegarde de %EAR%
+	echo รรรรรรรรร[ 09. Echec de la sauvegarde de %EAR%
 	set /a Sechec = Sechec + 1
 	)
 
@@ -274,14 +273,14 @@ rem =============================== RESULTAT DES SAUVEGARDES ===================
 :Resultat
 
 cls
-echo ษอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-echo บ                         Sauvegarde Des EARs V1.6                            บ
-echo ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-echo ษอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-echo บ                                                                             บ
+echo รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยป
+echo ยบ                         Sauvegarde Des EARs V1.6                            ยบ
+echo รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยผ
+echo รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยป
+echo ยบ                                                                             ยบ
 echo                     RESEAU : %Classification%
-echo บ                                                                             บ
-echo ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+echo ยบ                                                                             ยบ
+echo รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยผ
 echo ______________________________________________________________________________
 echo.
 echo                    Etat des sauvegardes du %day%-%month%-%year%
