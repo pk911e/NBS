@@ -1,0 +1,3 @@
+cisco;Nom_EAR;IP
+3Com;Nom_EAR;IP
+FINEAR

@@ -1,0 +1,63 @@
+!
+!
+!	Variables d'envrironnement pur le Script de 
+!	Sauvegarde automatique des EARs
+!
+!	Veuillez indiquez les variables dans les lignes
+!	Ne commencant pas par un !
+!
+!--------------------------------------------------------------
+!
+!	Adresse IP du serveur TFTP
+!
+174.1.149.21
+!
+!--------------------------------------------------------------
+!
+!	Login de connexion aux EARs
+!
+SauvegardeEAR
+!
+!--------------------------------------------------------------
+!
+!	Mot de passe 
+!
+Tpdk3x:G789zAvv
+!
+!--------------------------------------------------------------
+!
+!	Lecteur qui supportera la Sauvegarde et le Script
+!
+d:
+!
+!--------------------------------------------------------------
+!
+!	Repertoire de base de la Sauvegarde
+!
+01.SauvegardeEAR
+!
+!--------------------------------------------------------------
+!
+!	Classification du reseau sauvegarder
+!
+MISSION_RESTRICTED
+!
+!--------------------------------------------------------------
+!
+!	Chemin du script
+!
+Script
+!
+!--------------------------------------------------------------
+!
+!
+!
+!
+!
+!
+!
+!	FIN DES VARIABLES 
+!
+! 	/!\ NE PAS MODIFIER /!\
+!
+FINVARIABLES
