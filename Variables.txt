@@ -10,7 +10,7 @@
 !
 !	Adresse IP du serveur TFTP
 !
-174.1.149.21
+x.x.x.x
 !
 !--------------------------------------------------------------
 !
@@ -40,7 +40,7 @@ d:
 !
 !	Classification du reseau sauvegarder
 !
-MISSION_RESTRICTED
+Toto.com
 !
 !--------------------------------------------------------------
 !
